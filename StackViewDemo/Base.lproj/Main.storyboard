@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-kY-v37">
+                                <rect key="frame" x="0.0" y="20" width="600" height="469"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How do you like our app?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e81-e5-3zy">
+                                        <rect key="frame" x="204" y="0.0" width="192" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="X9a-j2-hTw">
+                                        <rect key="frame" x="146" y="70" width="308" height="321"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7hi-To-ka7">
+                                        <rect key="frame" x="220" y="439" width="161" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-xa-dNm">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
+                                                <state key="normal" title="Add Star!"/>
+                                                <connections>
+                                                    <action selector="addStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Cx-16-Gbk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3D-Zh-M2O">
+                                                <rect key="frame" x="74" y="0.0" width="87" height="30"/>
+                                                <state key="normal" title="Remove Star">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="removeStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GHN-a4-kvR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-gr-ZvA">
+                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="6iW-GH-wKW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lx0-gr-ZvA" firstAttribute="top" secondItem="8R9-kY-v37" secondAttribute="bottom" constant="1" id="3HG-Ot-YLd"/>
+                            <constraint firstAttribute="trailing" secondItem="Lx0-gr-ZvA" secondAttribute="trailing" id="AtA-XQ-bFE"/>
+                            <constraint firstItem="Lx0-gr-ZvA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JOg-pk-xGW"/>
+                            <constraint firstItem="8R9-kY-v37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q5G-o1-gW9"/>
+                            <constraint firstItem="8R9-kY-v37" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Smu-Ms-VUf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lx0-gr-ZvA" secondAttribute="bottom" id="ZPO-Fl-fSr"/>
+                            <constraint firstAttribute="trailing" secondItem="8R9-kY-v37" secondAttribute="trailing" id="riH-Z2-MkH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="horizontalStackView" destination="Lx0-gr-ZvA" id="lEa-kt-y0g"/>
+                        <outlet property="verticalStackView" destination="8R9-kY-v37" id="mfP-xm-YSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="308" height="321"/>
+    </resources>
+</document>
